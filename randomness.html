@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="simpleFunction()">Simple</button>
+    <button onclick="oldStyleFunction()">Old Style</button>
+    <button onclick="crazyStyleFunction()">Crazy Style</button>
+    <button onclick="randsomStyleFunction()">Random Style</button>
+
+    
+
+    <p id = "mySentence"> With buttons, ANYTHING is possible!</p>
+    
+    <script>
+
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+
+        let mySentecne = document.getElementById("mySentence")
+        function simpleFunction(){
+            document.body.style.backgroundColor = 'lightblue'
+            mySentence.style.fontWeight = 'bold'
+            mySentence.style.fontFamily = 'Arial'
+            mySentence.style.color = 'black'
+        }
+        function oldStyleFunction(){
+            document.body.style.backgroundColor = 'grey'
+            mySentence.style.fontFamily = 'Georgia'
+            mySentence.style.color = 'saddlebrown'
+        }
+        function crazyStyleFunction(){
+            document.body.style.backgroundColor = 'lightgreen'
+            mySentence.style.fontFamily = 'Brush Script MT'
+            mySentence.style.color = 'purple'
+        }
+        function randsomStyleFunction(){
+            document.body.style.backgroundColor = 'randomColor'
+            mySentence.style.color = 'randomColor'
+        }
+    </script>
+</body>
+</html>
