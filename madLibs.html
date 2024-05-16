@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Papyrus;
+            font-weight: bold;
+        }
+        h1{
+            font-family: Papyrus;
+            font-weight: bold;
+        }
+        h3{
+            font-family: Papyrus;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mad-Libs: Animal-splosion!</h1>
+
+    <h3 id = "madLib"></h3>
+
+    <label>Color: </label>
+    <input type = "color" id = "color">
+    <br>
+    <br>
+    <label>Animal: </label>
+    <input id = "animal">
+    <br>
+    <br>
+    <label>Dessert: </label>
+    <input id = "dessert">
+    <br>
+    <br>
+    <label>Name: </label>
+    <input id = "name">
+    <br>
+    <br>
+    <label>Feeling: </label>
+    <input id = "feeling">
+<br>
+<br>
+<button onclick = "createStoryFunction()">Create Your Story</button>
+
+<script>
+    let madLib = document.getElementById("madLib") 
+    let color = document.getElementById("color") 
+    let animal = document.getElementById("animal")
+    let dessert = document.getElementById("dessert")   
+    let name = document.getElementById("name") 
+    let feeling = document.getElementById("feeling") 
+
+    function createStoryFunction(){
+        console.log(madLib.value)
+        console.log(color.value)
+        console.log(animal.value)
+        console.log(dessert.value)
+        console.log(name.value)
+        console.log(feeling.value)
+        document.body.style.backgroundColor = color.value
+        madLib.innerText = "There once was an " + animal.value + " named " + name.value + 
+        ". They were sat at the table with thier " + color.value + 
+        " bowl, waiting for thier favorite dessert: " + dessert.value + 
+        ". The thought of eating thier favorite dessert, somehow made them " + feeling.value + 
+        ". Unfortunately for " + name.value + ", a plane crashed into them a few seconds later, and it exploded."
+    }
+
+</script>
+
+<br>
+<br>
+<br>
+</body>
+</html>
